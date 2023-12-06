@@ -33,7 +33,7 @@ requirements:
   build:
     - {{ compiler("c") }}
     - {{ compiler("cxx") }}
-    - patchelf  # [linux]
+    - patchelf <0.18.0  # [linux]
   host:
     - cuda-version {{ cuda_version }}
     - cuda-cupti
