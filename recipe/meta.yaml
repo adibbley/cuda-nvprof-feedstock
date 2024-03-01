@@ -21,7 +21,7 @@ source:
   sha256: 3abf2993dad74a981b5ea3405cdd0c5173ab848cbbd0a5ea140b04ae9fdf4baa  # [win]
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
   skip: true  # [osx or aarch64]
   missing_dso_whitelist:
