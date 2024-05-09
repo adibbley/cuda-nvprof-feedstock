@@ -34,5 +34,9 @@ for i in `ls`; do
         # Leaving bin in PREFIX
         mkdir -p ${PREFIX}
         cp -rv $i ${PREFIX}
+        # we also need to patch bin/nvprof, it contains runpaths to system directories
+        if [[ $i == "bin" ]] && [[ -f "${i}/nvprof" ]]; then
+            patchelf --set-rpath '$ORIGIN/../lib' --force-rpath ${PREFIX}/$i/nvprof
+        fi
     fi
 done
