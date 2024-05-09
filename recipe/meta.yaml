@@ -27,6 +27,8 @@ build:
   missing_dso_whitelist:
     # This is a driver file, might be able to use cuda-compat to remove this
     - '*/libcuda.so.1'  # [linux]
+    - '*/libgcc_s.so.1'  # [linux]
+    - '*/libstdc++.so.6'  # [ppc64le]
     - '*/nvcuda.dll'    # [win]
 
 requirements:
