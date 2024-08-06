@@ -20,12 +20,14 @@ source:
   sha256: 7d7f6cb89fc22c8b711a48f9deceaf21908014ab07c44d1a53e064b4bcd26582  # [win]
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
   skip: true  # [osx or aarch64 or ppc64le]
   missing_dso_whitelist:
     # This is a driver file, might be able to use cuda-compat to remove this
     - '*/libcuda.so.1'  # [linux]
+    - '*/libgcc_s.so.1'  # [linux]
+    - '*/libstdc++.so.6'  # [ppc64le]
     - '*/nvcuda.dll'    # [win]
 
 requirements:
