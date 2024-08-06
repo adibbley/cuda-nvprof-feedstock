@@ -1,6 +1,6 @@
 {% set name = "cuda-nvprof" %}
-{% set version = "12.4.127" %}
-{% set cuda_version = "12.4" %}
+{% set version = "12.6.37" %}
+{% set cuda_version = "12.6" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "windows-x86_64" %}  # [win]
@@ -16,14 +16,13 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvprof/{{ platform }}/cuda_nvprof-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 5ac35eb3edf867ba757c3c04a6fd4b79cae38de47bd3f384af9ab5615b1d0083  # [linux64]
-  sha256: 6bfc9e12fb06176c093659cc108fd9397e4b5168697609660b309f42811ff806  # [ppc64le]
-  sha256: bd434d759948b4ef9d9e663b89f5019ea104afec6bf7a17267c624b0bfbc1a03  # [win]
+  sha256: 2df45141995feed32fd8ca0a88738604a4d61989b7d4394caf868f1b92d63d2b  # [linux64]
+  sha256: 7d7f6cb89fc22c8b711a48f9deceaf21908014ab07c44d1a53e064b4bcd26582  # [win]
 
 build:
-  number: 2
+  number: 1
   binary_relocation: false
-  skip: true  # [osx or aarch64]
+  skip: true  # [osx or aarch64 or ppc64le]
   missing_dso_whitelist:
     # This is a driver file, might be able to use cuda-compat to remove this
     - '*/libcuda.so.1'  # [linux]
