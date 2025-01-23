@@ -1,6 +1,6 @@
 {% set name = "cuda-nvprof" %}
-{% set version = "12.6.80" %}
-{% set cuda_version = "12.6" %}
+{% set version = "12.8.57" %}
+{% set cuda_version = "12.8" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "windows-x86_64" %}  # [win]
@@ -16,8 +16,8 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvprof/{{ platform }}/cuda_nvprof-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: c206de5394cd7411f7793fad077f39be235533323b7dc4c1d463f3cdc1cc838d  # [linux64]
-  sha256: a7aba7f1a24d721e659bf058cc1abfeceaad50bdf1cc9f88e1f67d4de5584663  # [win]
+  sha256: d8550785fe9076ac7e411e646544537b010f6e4d0f9e4eb2d5586073e2b6deb4  # [linux64]
+  sha256: f6c1a450e9153c0d06b9f842d928afe19e4d24d4bb82a668f47eacf8c21140fa  # [win]
 
 build:
   number: 0
