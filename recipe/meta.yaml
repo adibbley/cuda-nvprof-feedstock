@@ -1,6 +1,6 @@
 {% set name = "cuda-nvprof" %}
-{% set version = "12.8.90" %}
-{% set cuda_version = "12.8" %}
+{% set version = "12.9.19" %}
+{% set cuda_version = "12.9" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "windows-x86_64" %}  # [win]
@@ -16,11 +16,11 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvprof/{{ platform }}/cuda_nvprof-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 66d5e0e498a50f1f240d80aa0a0577709b39aa98e2a71a578bc3bc271b9ad131  # [linux64]
-  sha256: 38405e49b0956972e7f3c4a6cd3a06ab3c0547a7bd73ce55510346e4a1063daf  # [win]
+  sha256: 244de279776251636039ff93dfe4abca41a953f38586c824b188376cb21d65c3  # [linux64]
+  sha256: 21fe0f7ce782ed8fce3bec74234f779f74330fbdc8ca007b5f734ef7d00e708c  # [win]
 
 build:
-  number: 1
+  number: 0
   binary_relocation: false
   skip: true  # [osx or aarch64 or ppc64le]
   missing_dso_whitelist:
